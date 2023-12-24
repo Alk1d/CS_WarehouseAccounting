@@ -139,5 +139,22 @@ namespace KursTest.Utils
 
         }
 
+        public static void InsertPhoto(string tableName, string photoFieldName, int id, IEnumerable<byte> photo)
+        {
+            var query = $"UPDATE Products SET {photoFieldName} = @Photo WHERE Id = @Id";
+            var conn = new SqlConnection(Properties.Settings.Default.WarehouseDBConnectionString);
+            conn.Open();
+            using (var command = new SqlCommand(query, conn))
+            {
+                command.Parameters.AddWithValue("@Photo", photo);
+                command.Parameters.AddWithValue("@Id", id);
+                command.ExecuteNonQuery();
+            }
+            conn.Close();
+        }
+
+        private static string GetFieldValueByType(TableField tableField)
+            => tableField.TableFieldType == TableFieldTypes.integer
+                ? tableField.TableFieldValue : $"'{tableField.TableFieldValue}'";
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,7 @@ namespace KursTest
     {
         private bool _isEditMode = false;
         private int _id = 0;
+        private byte[] _photo;
         public EditProductForm()
         {
             InitializeComponent();
@@ -72,6 +74,13 @@ namespace KursTest
             if (_isEditMode)
             {
                 DBHelper.UpdateEntry(Constants.TableNames.ProductsTableName, _id, Productfields);
+
+                if (_photo != null)
+                {
+                    DBHelper.InsertPhoto(Constants.TableNames.ProductsTableName, "Photo", _id, _photo);
+                }
+               
+
                 DialogResult = DialogResult.OK;
             }
             else
@@ -84,6 +93,15 @@ namespace KursTest
         private void Cancelbutton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ChooseImageButton_Click(object sender, EventArgs e)
+        {
+            if (ChooseImageFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                var path = ChooseImageFileDialog.FileName;
+                _photo = File.ReadAllBytes(path);
+            }
         }
     }
 }

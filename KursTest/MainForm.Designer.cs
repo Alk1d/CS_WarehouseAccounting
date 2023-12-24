@@ -74,9 +74,16 @@
             this.SuppliesInfoGroupBox = new System.Windows.Forms.GroupBox();
             this.RightTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.InvoiceNameGroupBox = new System.Windows.Forms.GroupBox();
-            this.InvoicecomboBox = new System.Windows.Forms.ComboBox();
+            this.RightPhotoTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.RightInvoiceInfoTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.InvoiceOrgGroupBox = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceFull = new System.Windows.Forms.BindingSource(this.components);
+            this.InvoiceDateGroupBox = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ProductpictureBox = new System.Windows.Forms.PictureBox();
+            this.InvoicecomboBox = new System.Windows.Forms.ComboBox();
             this.InvoiceSupplyGroupBox = new System.Windows.Forms.GroupBox();
             this.InvoicedataGridView = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,10 +95,6 @@
             this.withSaleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fKSuppliesInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.InvoiceDateGroupBox = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.InvoiceOrgGroupBox = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.suppliesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.suppliesTableAdapter = new KursTest.WarehouseDBDataSetFullTableAdapters.SuppliesTableAdapter();
             this.invoiceTableAdapter = new KursTest.WarehouseDBDataSetFullTableAdapters.InvoiceTableAdapter();
@@ -114,13 +117,16 @@
             this.SuppliesInfoGroupBox.SuspendLayout();
             this.RightTableLayoutPanel.SuspendLayout();
             this.InvoiceNameGroupBox.SuspendLayout();
+            this.RightPhotoTableLayoutPanel.SuspendLayout();
+            this.RightInvoiceInfoTableLayoutPanel.SuspendLayout();
+            this.InvoiceOrgGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceFull)).BeginInit();
+            this.InvoiceDateGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductpictureBox)).BeginInit();
             this.InvoiceSupplyGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InvoicedataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKSuppliesInvoiceBindingSource)).BeginInit();
-            this.InvoiceDateGroupBox.SuspendLayout();
-            this.InvoiceOrgGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.suppliesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouseDBDataSetFullBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExcelExportBindingSource)).BeginInit();
@@ -504,30 +510,122 @@
             this.RightTableLayoutPanel.ColumnCount = 1;
             this.RightTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.RightTableLayoutPanel.Controls.Add(this.InvoiceNameGroupBox, 0, 0);
-            this.RightTableLayoutPanel.Controls.Add(this.InvoiceSupplyGroupBox, 0, 3);
-            this.RightTableLayoutPanel.Controls.Add(this.InvoiceDateGroupBox, 0, 1);
-            this.RightTableLayoutPanel.Controls.Add(this.InvoiceOrgGroupBox, 0, 2);
+            this.RightTableLayoutPanel.Controls.Add(this.InvoiceSupplyGroupBox, 0, 1);
             this.RightTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RightTableLayoutPanel.Location = new System.Drawing.Point(3, 16);
             this.RightTableLayoutPanel.Name = "RightTableLayoutPanel";
-            this.RightTableLayoutPanel.RowCount = 4;
-            this.RightTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.RightTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.RightTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.RightTableLayoutPanel.RowCount = 2;
+            this.RightTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.RightTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.RightTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.RightTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.RightTableLayoutPanel.Size = new System.Drawing.Size(530, 677);
             this.RightTableLayoutPanel.TabIndex = 0;
             // 
             // InvoiceNameGroupBox
             // 
+            this.InvoiceNameGroupBox.Controls.Add(this.RightPhotoTableLayoutPanel);
             this.InvoiceNameGroupBox.Controls.Add(this.InvoicecomboBox);
             this.InvoiceNameGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InvoiceNameGroupBox.Location = new System.Drawing.Point(3, 3);
             this.InvoiceNameGroupBox.Name = "InvoiceNameGroupBox";
-            this.InvoiceNameGroupBox.Size = new System.Drawing.Size(524, 44);
+            this.InvoiceNameGroupBox.Size = new System.Drawing.Size(524, 144);
             this.InvoiceNameGroupBox.TabIndex = 0;
             this.InvoiceNameGroupBox.TabStop = false;
             this.InvoiceNameGroupBox.Text = "Название:";
+            // 
+            // RightPhotoTableLayoutPanel
+            // 
+            this.RightPhotoTableLayoutPanel.ColumnCount = 2;
+            this.RightPhotoTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.RightPhotoTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.RightPhotoTableLayoutPanel.Controls.Add(this.RightInvoiceInfoTableLayoutPanel, 1, 0);
+            this.RightPhotoTableLayoutPanel.Controls.Add(this.ProductpictureBox, 0, 0);
+            this.RightPhotoTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.RightPhotoTableLayoutPanel.Location = new System.Drawing.Point(3, 41);
+            this.RightPhotoTableLayoutPanel.Name = "RightPhotoTableLayoutPanel";
+            this.RightPhotoTableLayoutPanel.RowCount = 1;
+            this.RightPhotoTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.RightPhotoTableLayoutPanel.Size = new System.Drawing.Size(518, 100);
+            this.RightPhotoTableLayoutPanel.TabIndex = 1;
+            // 
+            // RightInvoiceInfoTableLayoutPanel
+            // 
+            this.RightInvoiceInfoTableLayoutPanel.ColumnCount = 1;
+            this.RightInvoiceInfoTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.RightInvoiceInfoTableLayoutPanel.Controls.Add(this.InvoiceOrgGroupBox, 0, 1);
+            this.RightInvoiceInfoTableLayoutPanel.Controls.Add(this.InvoiceDateGroupBox, 0, 0);
+            this.RightInvoiceInfoTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RightInvoiceInfoTableLayoutPanel.Location = new System.Drawing.Point(153, 3);
+            this.RightInvoiceInfoTableLayoutPanel.Name = "RightInvoiceInfoTableLayoutPanel";
+            this.RightInvoiceInfoTableLayoutPanel.RowCount = 2;
+            this.RightInvoiceInfoTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.RightInvoiceInfoTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.RightInvoiceInfoTableLayoutPanel.Size = new System.Drawing.Size(362, 94);
+            this.RightInvoiceInfoTableLayoutPanel.TabIndex = 0;
+            // 
+            // InvoiceOrgGroupBox
+            // 
+            this.InvoiceOrgGroupBox.Controls.Add(this.textBox2);
+            this.InvoiceOrgGroupBox.Location = new System.Drawing.Point(3, 50);
+            this.InvoiceOrgGroupBox.Name = "InvoiceOrgGroupBox";
+            this.InvoiceOrgGroupBox.Size = new System.Drawing.Size(356, 41);
+            this.InvoiceOrgGroupBox.TabIndex = 3;
+            this.InvoiceOrgGroupBox.TabStop = false;
+            this.InvoiceOrgGroupBox.Text = "Поставщик:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "Organization", true));
+            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox2.Location = new System.Drawing.Point(3, 16);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(350, 20);
+            this.textBox2.TabIndex = 0;
+            // 
+            // invoiceBindingSource
+            // 
+            this.invoiceBindingSource.DataMember = "Invoice";
+            this.invoiceBindingSource.DataSource = this.bindingSourceFull;
+            // 
+            // bindingSourceFull
+            // 
+            this.bindingSourceFull.DataSource = this.warehouseDBDataSetFull;
+            this.bindingSourceFull.Position = 0;
+            // 
+            // InvoiceDateGroupBox
+            // 
+            this.InvoiceDateGroupBox.Controls.Add(this.textBox1);
+            this.InvoiceDateGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.InvoiceDateGroupBox.Location = new System.Drawing.Point(3, 3);
+            this.InvoiceDateGroupBox.Name = "InvoiceDateGroupBox";
+            this.InvoiceDateGroupBox.Size = new System.Drawing.Size(356, 41);
+            this.InvoiceDateGroupBox.TabIndex = 2;
+            this.InvoiceDateGroupBox.TabStop = false;
+            this.InvoiceDateGroupBox.Text = "Дата:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "Date", true));
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Location = new System.Drawing.Point(3, 16);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(350, 20);
+            this.textBox1.TabIndex = 0;
+            // 
+            // ProductpictureBox
+            // 
+            this.ProductpictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ProductpictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.fKProductsCategoriesBindingSource4, "Photo", true));
+            this.ProductpictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProductpictureBox.Location = new System.Drawing.Point(3, 3);
+            this.ProductpictureBox.Name = "ProductpictureBox";
+            this.ProductpictureBox.Size = new System.Drawing.Size(144, 94);
+            this.ProductpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ProductpictureBox.TabIndex = 1;
+            this.ProductpictureBox.TabStop = false;
             // 
             // InvoicecomboBox
             // 
@@ -541,16 +639,6 @@
             this.InvoicecomboBox.Size = new System.Drawing.Size(518, 21);
             this.InvoicecomboBox.TabIndex = 0;
             this.InvoicecomboBox.ValueMember = "Id";
-            // 
-            // invoiceBindingSource
-            // 
-            this.invoiceBindingSource.DataMember = "Invoice";
-            this.invoiceBindingSource.DataSource = this.bindingSourceFull;
-            // 
-            // bindingSourceFull
-            // 
-            this.bindingSourceFull.DataSource = this.warehouseDBDataSetFull;
-            this.bindingSourceFull.Position = 0;
             // 
             // InvoiceSupplyGroupBox
             // 
@@ -659,48 +747,6 @@
             this.fKSuppliesInvoiceBindingSource.DataMember = "FK_Supplies_Invoice";
             this.fKSuppliesInvoiceBindingSource.DataSource = this.invoiceBindingSource;
             // 
-            // InvoiceDateGroupBox
-            // 
-            this.InvoiceDateGroupBox.Controls.Add(this.textBox1);
-            this.InvoiceDateGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.InvoiceDateGroupBox.Location = new System.Drawing.Point(3, 53);
-            this.InvoiceDateGroupBox.Name = "InvoiceDateGroupBox";
-            this.InvoiceDateGroupBox.Size = new System.Drawing.Size(524, 44);
-            this.InvoiceDateGroupBox.TabIndex = 2;
-            this.InvoiceDateGroupBox.TabStop = false;
-            this.InvoiceDateGroupBox.Text = "Дата:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "Date", true));
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(3, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(518, 20);
-            this.textBox1.TabIndex = 0;
-            // 
-            // InvoiceOrgGroupBox
-            // 
-            this.InvoiceOrgGroupBox.Controls.Add(this.textBox2);
-            this.InvoiceOrgGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.InvoiceOrgGroupBox.Location = new System.Drawing.Point(3, 103);
-            this.InvoiceOrgGroupBox.Name = "InvoiceOrgGroupBox";
-            this.InvoiceOrgGroupBox.Size = new System.Drawing.Size(524, 44);
-            this.InvoiceOrgGroupBox.TabIndex = 3;
-            this.InvoiceOrgGroupBox.TabStop = false;
-            this.InvoiceOrgGroupBox.Text = "Поставщик:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "Organization", true));
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(3, 16);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(518, 20);
-            this.textBox2.TabIndex = 0;
-            // 
             // suppliesBindingSource
             // 
             this.suppliesBindingSource.DataMember = "Supplies";
@@ -769,15 +815,18 @@
             this.SuppliesInfoGroupBox.ResumeLayout(false);
             this.RightTableLayoutPanel.ResumeLayout(false);
             this.InvoiceNameGroupBox.ResumeLayout(false);
+            this.RightPhotoTableLayoutPanel.ResumeLayout(false);
+            this.RightInvoiceInfoTableLayoutPanel.ResumeLayout(false);
+            this.InvoiceOrgGroupBox.ResumeLayout(false);
+            this.InvoiceOrgGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceFull)).EndInit();
+            this.InvoiceDateGroupBox.ResumeLayout(false);
+            this.InvoiceDateGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductpictureBox)).EndInit();
             this.InvoiceSupplyGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.InvoicedataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKSuppliesInvoiceBindingSource)).EndInit();
-            this.InvoiceDateGroupBox.ResumeLayout(false);
-            this.InvoiceDateGroupBox.PerformLayout();
-            this.InvoiceOrgGroupBox.ResumeLayout(false);
-            this.InvoiceOrgGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.suppliesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouseDBDataSetFullBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExcelExportBindingSource)).EndInit();
@@ -860,6 +909,9 @@
         private System.Windows.Forms.BindingSource ExcelExportBindingSource;
         private WarehouseDBDataSet ExcelExportDBDataSet;
         private System.Windows.Forms.ToolStripMenuItem ExcelPartialExportMenuItem;
+        private System.Windows.Forms.TableLayoutPanel RightPhotoTableLayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel RightInvoiceInfoTableLayoutPanel;
+        private System.Windows.Forms.PictureBox ProductpictureBox;
     }
 }
 

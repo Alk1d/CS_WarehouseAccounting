@@ -11,6 +11,7 @@ namespace KursTest
         public MainForm()
         {
             InitializeComponent();
+            ProductpictureBox.BackgroundImage = Properties.Resources.DefaultImage;
         }
 
         private void bindingSource1_CurrentChanged(object sender, EventArgs e)

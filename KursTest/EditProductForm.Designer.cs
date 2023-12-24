@@ -44,6 +44,8 @@
             this.productsTableAdapter = new KursTest.WarehouseDBDataSetFullTableAdapters.ProductsTableAdapter();
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
+            this.ChooseImageFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.ChooseImageButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouseDBDataSetFull)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKProductsCategoriesBindingSource)).BeginInit();
@@ -162,11 +164,27 @@
             this.Savebutton.UseVisualStyleBackColor = true;
             this.Savebutton.Click += new System.EventHandler(this.Savebutton_Click);
             // 
+            // ChooseImageFileDialog
+            // 
+            this.ChooseImageFileDialog.FileName = "ChooseImageFileDialog";
+            this.ChooseImageFileDialog.Filter = "Jpg images | *.jpg";
+            // 
+            // ChooseImageButton
+            // 
+            this.ChooseImageButton.Location = new System.Drawing.Point(146, 337);
+            this.ChooseImageButton.Name = "ChooseImageButton";
+            this.ChooseImageButton.Size = new System.Drawing.Size(131, 23);
+            this.ChooseImageButton.TabIndex = 12;
+            this.ChooseImageButton.Text = "Выбрать фото";
+            this.ChooseImageButton.UseVisualStyleBackColor = true;
+            this.ChooseImageButton.Click += new System.EventHandler(this.ChooseImageButton_Click);
+            // 
             // EditProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(430, 411);
+            this.Controls.Add(this.ChooseImageButton);
             this.Controls.Add(this.Cancelbutton);
             this.Controls.Add(this.Savebutton);
             this.Controls.Add(this.ProductAmounttextBox);
@@ -207,5 +225,7 @@
         private WarehouseDBDataSetFullTableAdapters.ProductsTableAdapter productsTableAdapter;
         private System.Windows.Forms.Button Cancelbutton;
         private System.Windows.Forms.Button Savebutton;
+        private System.Windows.Forms.OpenFileDialog ChooseImageFileDialog;
+        private System.Windows.Forms.Button ChooseImageButton;
     }
 }
